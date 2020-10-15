@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: "Doris", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(148, 48, 48, 0.2),
+        rgba(167,67, 67, 0.4)
+        ),
+    url(images/bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.hamburger-menu {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: chocolate;
+    
+}
+
