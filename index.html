@@ -30,10 +30,36 @@
     <header class="showcase">
         <div class="container showcase-inner">
           <h1>Welcome</h1>
-          <p>lorerm ipsum iosa dad iwafwfsd asdada lorerm ipsum iosa dad iwafwfsd asdada 
-            lorerm ipsum iosa dad iwafwfsd asdada lorerm ipsum iosa dad iwafwfsd asdad</p>
-            <a href="#" class="btn">Read More<div class="aline"></div></a>
+          <p>Click below to watch ABC NEWS! </p>
+            <a href="#" id="read_more" class="btn">Watch ABC!<div class="aline"></div></a>
         </div>
     </header>
+        <!-- popup -->
+        <div class="popup none">
+          <div class="contain">
+          <button id="popup_button">X</button>
+          <iframe id="abc_frame" height="100%" width="100%" src=https://www.youtube.com/embed/IukZ7gOGPj8 name="iframe_a"></iframe>
+        </div>
+        </div>
   </body>
 </html>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+
+   document.getElementById('popup_button').addEventListener('click', function() {
+    document.querySelector('.popup').classList.add('none');
+    document.querySelector('.showcase').classList.remove('popup-color');
+  //  reload page so video does not keep playing
+    location.reload();
+   });
+
+
+   document.getElementById('read_more').addEventListener('click', function() {
+    document.querySelector('.popup').classList.remove('none');
+    document.querySelector('.showcase').classList.add('popup-color');
+   });
+  
+});
+  
+</script>
